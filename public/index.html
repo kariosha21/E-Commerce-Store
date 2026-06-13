@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aether — Premium Minimalist Tech & Audio</title>
+  <meta name="description" content="Shop premium smart home gadgets, custom mechanical keyboards, and spatial audio equipment. Experience absolute minimalist desk aesthetics.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#shop" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>
+        <span class="logo-text">AETHER</span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="#shop" class="nav-link active" id="nav-shop"><i class="fa-solid fa-store"></i> Shop</a>
+        <a href="#orders" class="nav-link hidden" id="nav-orders"><i class="fa-solid fa-box-open"></i> Orders</a>
+        <a href="#auth" class="nav-link" id="nav-auth"><i class="fa-solid fa-user"></i> Login</a>
+        <div class="user-greeting hidden" id="user-greeting">
+          <span>Hello, <strong id="greeting-username"></strong></span>
+          <button id="logout-btn" class="btn btn-icon-small" title="Logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="cart-toggle-btn" class="cart-btn" aria-label="Open cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cart-count" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="app-viewport" class="main-content">
+    <!-- Dynamic views will be injected here by app.js -->
+  </main>
+
+  <!-- Cart Drawer (Side Overlay) -->
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-drawer-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer-content">
+      <div class="cart-drawer-header">
+        <h2>Your Bag</h2>
+        <button id="cart-close-btn" class="close-btn" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      
+      <div id="cart-items-container" class="cart-items-list">
+        <!-- Cart items injected here -->
+      </div>
+      
+      <div class="cart-drawer-footer">
+        <div class="cart-total-row">
+          <span>Subtotal</span>
+          <span id="cart-total-price">$0.00</span>
+        </div>
+        <p class="cart-notice">Tax & shipping calculated at checkout.</p>
+        <button id="checkout-btn" class="btn btn-primary btn-full">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon"><i class="fa-solid fa-microchip"></i></span>
+          <span class="logo-text">AETHER</span>
+        </div>
+        <p>Designing the physical artifacts of tomorrow. Sound, typing, and ambient light, engineered for focus.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#shop">Store</a></li>
+          <li><a href="#shop?category=Audio">Acoustics</a></li>
+          <li><a href="#shop?category=Desk Accessories">Desk Essentials</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-group">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="#auth">Sign In</a></li>
+          <li><a href="#orders">My Orders</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AETHER Inc. All rights reserved. Created for premium demonstration purposes.</p>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="/js/app.js"></script>
+</body>
+</html>
